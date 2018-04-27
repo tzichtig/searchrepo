@@ -3,7 +3,7 @@ import { Http ,Response} from '@angular/http';
 import 'rxjs/add/operator/map';
 import {Observable} from 'rxjs/Rx';
 import {PaginatePipe, PaginationService, PaginationControlsDirective, PaginationInstance} from 'ng2-pagination';
-import { SpinnerService } from '@chevtek/angular-spinners';
+
 
 
 @Component({
@@ -17,14 +17,14 @@ import { SpinnerService } from '@chevtek/angular-spinners';
 export class AppComponent implements OnInit {
    baseUrl="https://api.github.com/search/repositories?q=";
   constructor(private http: Http) { }
-  private title = 'app';
-  private searchKeyWord:string;
-  private _items:any[];
-  private total_count:string
-  private page:number=1;
-  private url:string
-  private per_page: number=15;
-  private showTable:boolean=false
+   title = 'app';
+  searchKeyWord:string;
+   _items:any[];
+   total_count:string
+   page:number=1;
+   url:string
+   per_page: number=15;
+   showTable:boolean=false
   //https://api.github.com/search/repositories?q=tetries&page=1&per_page=3
   ngOnInit(): void {
    
